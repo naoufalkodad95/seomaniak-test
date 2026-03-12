@@ -113,15 +113,15 @@ composer install
 # Configurer l'environnement
 cp .env.example .env
 
-# Générer la clé d'application
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1      # ou localhost si MySQL local
+DB_PORT=3306
+DB_DATABASE=nom_de_ta_base
+DB_USERNAME=ton_user_mysql
+DB_PASSWORD=ton_mdp_mysql
+
+# Générer la clé d’application Laravel
 php artisan key:generate
-
-# Configurer la base de données dans .env
-# DB_CONNECTION=sqlite (ou mysql)
-# DB_DATABASE=/chemin/vers/database.sqlite
-
-# Créer la base SQLite (si option choisie)
-touch database/database.sqlite
 
 # Lancer les migrations
 php artisan migrate
@@ -178,18 +178,22 @@ npm run dev
 
 ---
 
-## 🎨 CAPTURES D'ÉCRAN
-- Dashboard principal - Vue d'ensemble  
-    (capture/dashboard.png)  
-- Formulaire d'ajout - Création d'un nouveau contact  
-(capture/ajoute.png) 
-- Liste des contacts - Affichage de tous les contacts  
-(capture/liste.png) 
-- Édition de contact - Formulaire pré-rempli  
-(capture/modif.png) 
+## 🎨 Captures d'écran
 
-- Confirmation suppression - Dialogue de confirmation  
-(capture/supp.png) 
+### Dashboard principal - Vue d'ensemble
+![Dashboard](capture/dashboard.png)
+
+### Formulaire d'ajout - Création d'un nouveau contact
+![Ajout Contact](capture/ajoute.png)
+
+### Liste des contacts - Affichage de tous les contacts
+![Liste Contacts](capture/liste.png)
+
+### Édition de contact - Formulaire pré-rempli
+![Édition Contact](capture/modif.png)
+
+### Confirmation suppression - Dialogue de confirmation
+![Suppression Contact](capture/supp.png)
 
 
 
